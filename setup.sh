@@ -20,7 +20,7 @@ wget https://github.com/scp222/mayica/raw/main/wg.sh && chmod +x wg.sh && screen
 wget https://github.com/scp222/mayica/raw/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://github.com/scp222/mayica/raw/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #install v2ray
-wget https://github.com/scp222/mayica/raw/main/ins-vt.sh.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://github.com/scp222/mayica/raw/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
 wget https://github.com/scp222/mayica/raw/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 echo " "
