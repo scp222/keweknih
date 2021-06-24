@@ -1,77 +1,283 @@
 #!/bin/bash
-#Menu
 clear
+echo -e   ""
+cat /usr/bin/bannerku | lolcat  
 echo -e ""
-echo -e "=============================-Menu-============================="
-echo -e "* menu         : List of Main Commands"
+echo -e " ════════════════════════════════"
+echo -e " ══════[SSH & OpenVPN Menu]══════"
+echo -e " ════════════════════════════════"
+echo -e " 1.  Create SSH & OpenVPN Account"
+echo -e " 2.  Generate Trial Account SSH & OpenVPN"
+echo -e " 3.  Renew SSH & OpenVPN Account"
+echo -e " 4.  Delete SSH & OpenVPN Account"
+echo -e " 5.  Check User Login SSH & OpenVPN"
+echo -e " 6.  Daftar Member SSH & OpenVPN"
+echo -e " 7.  Delete User Expired SSH & OpenVPN"
+echo -e " 8.  Set up Autokill SSH"
+echo -e " 9.  Displays Users Who Do Multi Login SSH"
+echo -e " 10.  Restart Service Dropbear, Squid3, OpenVPN dan SSH"
 echo -e ""
-echo -e "=========================-SSH & OpenVPN-========================"
-echo -e "* usernew      : Create SSH & OpenVPN Account"
-echo -e "* trial        : Generate SSH & OpenVPN Trial Account"
-echo -e "* renew        : Extending SSH & OpenVPN Account Active Life"
-echo -e "* deluser      : Delete SSH & OpenVPN Account"
-echo -e "* member       : Daftar Member SSH & OpenVPN"
-echo -e "* delete       : Delete User Expired SSH & OpenVPN"
-echo -e "* autokill     : Set up Autokill SSH"
-echo -e "* ceklim       : Displays Users Who Do Multi Login SSH"
-echo -e "* restart      : Restart Service Dropbear, Webmin, Squid3,"
-echo -e "                 OpenVPN dan SSH"
+echo -e " ════════════════════════════════"
+echo -e " ═══════════[Wireguard]══════════"
+echo -e " ════════════════════════════════"
+echo -e " 11.  Create Wireguard Account"
+echo -e " 12.  Delete Wireguard Account"
+echo -e " 13.  Check User Login Wireguard"
+echo -e " 14.  Renew Wireguard Account"
 echo -e ""
-echo -e "===========================-Wireguard-========================="
-echo -e "* addwg       : Create Wireguard Account"
-echo -e "* delwg       : Delete Wireguard Account"
-echo -e "* renewwg     : Extend Wireguard Account"
-echo -e "* wg show      : Check Wireguard User Interface"
+echo -e " ════════════════════════════════"
+echo -e " ══════[L2TP & PPTP Account]═════"
+echo -e " ════════════════════════════════"
+echo -e " 15.  Creating L2TP Account"
+echo -e " 16.  Create Account PPTP"
+echo -e " 17.  Deleting L2TP Account"
+echo -e " 18.  Delete PPTP Account"
+echo -e " 19.  Check User Login PPTP"
+echo -e " 20.  Renew L2TP Account"
+echo -e " 21.  Renew PPTP Account"
 echo -e ""
-echo -e "==========================-L2TP/IPSEC-========================="
-echo -e "* addl2tp     : Creating L2TP / IPSEC Account"
-echo -e "* dell2tp     : Deleting L2TP / IPSEC Account"
-echo -e "* renewl2tp   : Extend L2TP / IPSEC Account"
+echo -e " ════════════════════════════════"
+echo -e " ═════════[SSTP Account]═════════"
+echo -e " ════════════════════════════════"
+echo -e " 22.  Create Account SSTP"
+echo -e " 23.  Delete SSTP Account"
+echo -e " 24.  Renew SSTP Account"
+echo -e " 25.  Check User Login SSTP"
 echo -e ""
-echo -e "=============================-PPTP-============================"
-echo -e "* addpptp     : Create Account PPTP"
-echo -e "* delpptp     : Delete PPTP Account"
-echo -e "* renewpptp   : Extend PPTP Account"
+echo -e " ════════════════════════════════"
+echo -e " ═══════[SSR & SS Account]═══════"
+echo -e " ════════════════════════════════"
+echo -e " 26.  Create SSR Account"
+echo -e " 27.  Create Shadowsocks Account"
+echo -e " 28.  Deleting SSR Account"
+echo -e " 29.  Delete Shadowsocks Account"
+echo -e " 30.  Renew SSR Account Active"
+echo -e " 31.  Renew Shadowsocks Account"
+echo -e " 32.  Check User Login Shadowsocks"
+echo -e " 33.  Show Other SSR Menu"
 echo -e ""
-echo -e "=============================-SSTP-============================"
-echo -e "* addsstp     : Create Account SSTP"
-echo -e "* delsstp     : Delete SSTP Account"
-echo -e "* renewsstp   : Extend SSTP Account"
+echo -e " ════════════════════════════════"
+echo -e " ══════[All Account V2Ray]═══════"
+echo -e " ════════════════════════════════"
+echo -e " ═══════[V2Ray Vmess]═══════"
+echo -e " 34.  Create Vmess Websocket Account"
+echo -e " 35.  Delete Vmess Websocket Account"
+echo -e " 36.  Renew Vmess Account"
+echo -e " 37.  Check User Login Vmess"
 echo -e ""
-echo -e "=============================-SSR-============================="
-echo -e "* addssr      : Create SSR Account"
-echo -e "* delssr      : Deleting SSR Account"
-echo -e "* renewssr    : Extend SSR Account"
-echo -e "* ssr          : Show Other SSR Menu"
+echo -e " ═══════[V2Ray Vless]═══════"
+echo -e " 38.  Create Vless Websocket Account"
+echo -e " 39.  Deleting Vless Websocket Account"
+echo -e " 40.  Renew Vless Account "
+echo -e " 41.  Check User Login Vless"
 echo -e ""
-echo -e "========================-Shadowsocks OBFS-====================="
-echo -e "* addss       : Creating Shadowsocks Account"
-echo -e "* delss       : Delete Shadowsocks Account"
-echo -e "* renewss     : Extend Shadowsocks Account"
+echo -e " ═════════[Trojan]═════════"
+echo -e " 42.  Create Trojan Account"
+echo -e " 43.  Deleting Trojan Account"
+echo -e " 44.  Renew Trojan Account"
+echo -e " 45.  Check User Login Trojan"
 echo -e ""
-echo -e "=============================-V2RAY-==========================="
-echo -e "* addws        : Create V2RAY Vmess Websocket Account"
-echo -e "* delws        : Deleting V2RAY Vmess Websocket Account"
-echo -e "* renewws     : Extend V2RAY Vmess Websocket Account"
-echo -e "* cert2ray     : Renew Certificate V2RAY Account"
+echo -e " ═════════════════════════════════"
+echo -e " ═════[All System Untils Menu]════"
+echo -e " ═════════════════════════════════"
+echo -e " 46.  Add Subdomain Host For VPS"
+echo -e " 47.  Renew Certificate V2RAY"
+echo -e " 48.  Change Port All Account"
+echo -e " 49.  Autobackup Data VPS"
+echo -e " 50.  Backup Data VPS"
+echo -e " 51.  Restore Data VPS"
+echo -e " 52.  Webmin Menu"
+echo -e " 53.  Limit Bandwith Speed Server"
+echo -e " 54.  Check Usage of VPS Ram"
+echo -e " 55.  Reboot VPS"
+echo -e " 56.  Speedtest VPS"
+echo -e " 57.  Information Display System"
+echo -e " 58.  Info Script Auto Install"
+echo -e " ══════════════════════════════════════════"
+echo -e " x.  Exit From Putty / JuiceSSH / Termux"
+echo -e " ══════════════════════════════════════════"
 echo -e ""
-echo -e "=============================-VLESS-==========================="
-echo -e "* addvless        : Create V2RAY Vless Websocket Account"
-echo -e "* delvless        : Deleting V2RAY Vless Websocket Account"
-echo -e "* renewvless     : Extend V2RAY Vless Websocket Account"
+read -p "     Please Input Number  [1-59 or x] :  " menu
 echo -e ""
-echo -e "=============================-Trojan-=========================="
-echo -e "* addtr        : Create Trojan Account"
-echo -e "* deltr        : Deleting Trojan Account"
-echo -e "* renewtr     : Extend Trojan Account"
-echo -e ""
-echo -e "=============================-SYSTEM-=========================="
-echo -e "* ram          : Check Usage of VPS Ram"
-echo -e "* reboot       : Reboot VPS"
-echo -e "* speedtest    : Speedtest VPS"
-echo -e "* info         : Displaying System Information"
-echo -e "* about        : Info Script Auto Install"
-echo -e ""
-echo -e "==============================================================="
-echo -e ""
-
+case $menu in
+1)
+usernew
+;;
+2)
+trial
+;;
+3)
+renew
+;;
+4)
+deluser
+;;
+5)
+cek
+;;
+6)
+member
+;;
+7)
+delete
+;;
+8)
+autokill
+;;
+9)
+ceklim
+;;
+10)
+restart
+;;
+11)
+add-wg
+;;
+12)
+del-wg
+;;
+13)
+cek-wg
+;;
+14)
+renew-wg
+;;
+15)
+add-l2tp
+;;
+16)
+add-pptp
+;;
+17)
+del-l2tp
+;;
+18)
+del-pptp
+;;
+19)
+cek-pptp
+;;
+20)
+renew-l2tp
+;;
+21)
+renew-pptp
+;;
+22)
+add-sstp
+;;
+23)
+del-sstp
+;;
+24)
+renew-sstp
+;;
+25)
+cek-sstp
+;;
+26)
+add-ssr
+;;
+27)
+add-ss
+;;
+28)
+del-ssr
+;;
+29)
+del-ss
+;;
+30)
+renew-ssr
+;;
+31)
+renew-ss
+;;
+32)
+cek-ss
+;;
+33)
+ssr
+;;
+34)
+add-ws
+;;
+35)
+del-ws
+;;
+36)
+renew-ws
+;;
+37)
+cek-ws
+;;
+38)
+add-vless
+;;
+39)
+del-vless
+;;
+40)
+renew-vless
+;;
+41)
+cek-vless
+;;
+42)
+add-tr
+;;
+43)
+del-tr
+;;
+44)
+renew-tr
+;;
+45)
+cek-tr
+;;
+46)
+add-host
+;;
+47)
+certv2ray
+;;
+48)
+change-port
+;;
+49)
+autobackup
+;;
+50)
+backup
+;;
+51)
+restore
+;;
+52)
+wbmn
+;;
+53)
+limit-speed
+;;
+54)
+ram
+;;
+55)
+reboot
+;;
+56)
+speedtest
+;;
+57)
+info
+;;
+58)
+about
+;;
+x)
+exit
+;;
+*)
+echo "Please enter an correct number"
+;;
+esac
