@@ -67,8 +67,6 @@ function pswdCheck() {
 if [ -f ".password.txt" ]; then
 echo ""
 Menu
-else
-echo -e "$orange" "  Licence Not Found..:)"
 echo ""
 UserPswd
 sleep 2.0
