@@ -94,8 +94,6 @@ echo -e $orange "Redirecting To Instahack...."
 sleep 2.0
 clear
 UserName
-else
-echo -e $cyan "Licence Not Matched..:)"
 sleep 1
 exit
 fi
