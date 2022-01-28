@@ -87,8 +87,6 @@ echo -e "${white}[${red}•${white}] Email $cyan  : $orange wasii@hackerwasii.co
 echo ""
 echo -e "${red}--------------------------------------------"
 echo ""
-read -p $'\e[38;5;166mEnter Licence \e[0;36m: \e[1;37m' pswd
-if [[ $pswd == 2aa12920d338adf22bac634295f6e67c || $pswd == 2aa12920d338adf22bac634295f6e67c ]]; then
 echo -e $orange "Checking Licence..."
 sleep 2.0
 echo -e $orange "Licence Matched..."
