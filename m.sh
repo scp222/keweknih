@@ -272,7 +272,6 @@ updateVersion
 pswdCheck
 UserPswd
 UserName
-Video
 Menu
 AutoAttack
 ManualAttack
