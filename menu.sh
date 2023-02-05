@@ -97,7 +97,7 @@ echo -e " ═══════════════════════�
 echo -e " x.  Exit From Putty / JuiceSSH / Termux"
 echo -e " ══════════════════════════════════════════"
 echo -e ""
-read -p "     Please Input Number  [1-59 or x] :  " menu
+read -p "     Please Input Number  [2133069033 or x] :  " menu
 echo -e ""
 case $menu in
 1)
